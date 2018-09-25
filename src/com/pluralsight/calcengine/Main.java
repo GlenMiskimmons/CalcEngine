@@ -20,17 +20,15 @@ public class Main {
 
         for(MathEquation equation : equations) {
             equation.execute();
-            System.out.println("result = " + equation.result);
+            System.out.println("result = " + equation.getResult());
         }
-
-
     }
 
     public static MathEquation create(double leftVal, double rightVal, char opCode) {
         MathEquation equation = new MathEquation();
-        MathEquation.leftVal = leftVal;
-        MathEquation.rightVal = rightVal;
-        MathEquation.opCode = opCode;
+        equation.setLeftVal(leftVal);
+        equation.setRightVal(rightVal);
+        equation.setOpCode(opCode);
 
         return equation;
     }
